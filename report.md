@@ -22,9 +22,10 @@ The home page is the most important page for a website as it is the first view t
 
 # Workouts
 The workouts page shows a list of all workouts that have been entered into the system. I have also added pagination which means that the pages load a lot faster as there is less data that needs to be loaded per page.
-The workouts are displayed using their title, a description and calories and the user is given the option for each workout to edit or delete the workout which will then re-direct them to the appropriate page.
+The workouts are displayed using their title, a description and calories and the user is given the option for each workout to edit or delete the workout which will then re-direct them to the appropriate page. As well as this, the user can also add a workout.
 
 ![Workouts](./public/images/WorkoutPage.PNG)
 
+# Friends
 
 
