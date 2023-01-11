@@ -52,7 +52,28 @@
             <th>Description</th>
             <th>Calories</th>
 
-        </tr> 
+        </tr>
+
+        <%  
+        
+          workouts.forEach(workout => {
+            
+        %>
+
+            <tr>
+                <td><%=  workout.title  %></td>
+                <td><%=  workout.description  %></td>
+                <td><%=  workout.calories  %></td>
+                <td class="text-center"><a class='btn btn-info btn-xs' href="/workouts/edit/<%= workout.id %>"><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+                <a  href="/workouts/delete/<%= workout.id %>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+            </tr>
+            
+         <%  
+          });
+         %>
+
+
+       
     </thead>
           
     </table>
