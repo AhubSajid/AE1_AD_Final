@@ -45,7 +45,7 @@ async function main() {
      * we tidy up the output so it represents the format we need for our new collection
      */
 
-    const gymFriendsRef = await db.collection("tastings").aggregate([
+    const gymFriendsRef = await db.collection("workouts").aggregate([
       { $match: { friend_name: { $ne: null } } },
       {
         $group: {
