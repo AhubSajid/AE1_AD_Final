@@ -22,10 +22,36 @@ The home page is the most important page for a website as it is the first view t
 
 # Workouts
 The workouts page shows a list of all workouts that have been entered into the system. I have also added pagination which means that the pages load a lot faster as there is less data that needs to be loaded per page.
-The workouts are displayed using their title, a description and calories and the user is given the option for each workout to edit or delete the workout which will then re-direct them to the appropriate page. As well as this, the user can also add a workout.
+The workouts are displayed using their title, a description and friend name and the user is given the option for each workout to edit or delete the workout which will then re-direct them to the appropriate page. As well as this, the user can also add a workout.
 
 ![Workouts](./public/images/WorkoutPage.PNG)
 
 # Friends
+The friends page is used to display a list of gym friends that have been retrieved from the database. The friend's ID, name and number of workouts is displayed as well as buttons that allow the user to edit or delete the friend. 
+The user also has the ability to add a new friend from this page. 
+
+![Friends](./public/images/Friends.PNG)
+
+# Login and Register
+For a user to perform certain tasks such as viewing saved workouts or creating a new workout they must login. This is only possible if the user has previously registered otherwise they will encounter an error as they won't be found in the database. I have inserted a picture to show what happens when a user who isn't registered tries to log in.
+
+![LoginNoUser](./public/images/LoginNoUser.PNG)
+
+If a new user wants to register they must enter their email and a password into a form which then sends this information to the database. Once they have done this they will be able to login and then perform all tasks as the header displaying the navigation will change to display all tasks and also display the users email as well as a logout button. For added security, the program doesn't save the users password directly but it uses BCrypt in order to hash the password. The user is then signed in and this allows the application to identify the current user from within every controller as the user seesion is set.
+
+![UserLoggedIn](./public/images/UserLoggedIn.PNG)
+
+
+# Key Design Decisions
+
+## Database Design
+
+This application consists of a production and development MongoDB database located in MongoDB atlas. Each of the databases have the following 3 collections:
+* Users
+* Workouts
+* Friends
+
+### Users
+
 
 
