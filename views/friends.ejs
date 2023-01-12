@@ -53,7 +53,25 @@
             <th>Workouts#</th>
 
         </tr>
+        <%  
+        
+        friends.forEach(friend => {
+          
+      %>
 
+          <tr>
+              <td><%=  friend._id  %></td>
+              <td><%=  friend.name  %></td>
+              <td><%=  friend.workouts  %></td>
+              
+              <td class="text-center"><a class='btn btn-info btn-xs' href="/friends/update/<%= friend.id %>" ><span class="glyphicon glyphicon-edit"></span> Edit</a> 
+                <a  href="/friends/delete/<%= friend.id %>" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> Del</a></td>
+               
+          </tr>
+          
+       <%  
+        });
+       %>
         
 
 

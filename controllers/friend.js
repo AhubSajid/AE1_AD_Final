@@ -29,7 +29,7 @@ exports.delete = async (req, res) => {
 exports.create = async (req, res) => {
 
   try {
-    const friend = new Friend({ name: req.body.name, twitter: req.body.twitter });
+    const friend = new Friend({ name: req.body.name, id : req.body._id});
     await friend.save();
     res.redirect('/friends/?message=friend has been created')
   } catch (e) {

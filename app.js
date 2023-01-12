@@ -96,6 +96,7 @@ app.post("/friends/update/:id", friendController.update);
 app.get("/create-workout", workoutController.createView);
 app.post("/create-workout", workoutController.create);
 app.get("/workouts/edit/:id", workoutController.edit);
+app.post("/update-workout",workoutController.edit);
 
 
 app.get("/search-workouts",(req,res) => {
