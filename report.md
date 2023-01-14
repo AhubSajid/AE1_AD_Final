@@ -53,5 +53,17 @@ This application consists of a production and development MongoDB database locat
 
 ### Users
 
+The users collection stores the login information of each user, allowing workouts to be associated with a user. An example of a user from the collection can be seen below:
 
+![UserFromCollection](./public/images/UserFromCollection.PNG)
+
+As you can see the password us hashed as opposed to being plaintext for added security.
+
+### Workouts
+
+The workouts collection stores the workout information for each workout created. This include all information such as title, reps, category etc. An example of this can be seen below.
+
+![WorkoutFromCollection](./public/images/WorkoutFromCollection.PNG)
+
+### 
 
