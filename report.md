@@ -46,10 +46,15 @@ If a new user wants to register they must enter their email and a password into 
 
 ## Database Design
 
-This application consists of a production and development MongoDB database located in MongoDB atlas. Each of the databases have the following 3 collections:
+This application consists of a production and development MongoDB database located in MongoDB atlas. Each of the databases have the following 3 main collections:
 * Users
 * Workouts
 * Friends
+
+And 3 secondary collections:
+* Categories
+* Reps
+* Times
 
 ### Users
 
@@ -65,5 +70,37 @@ The workouts collection stores the workout information for each workout created.
 
 ![WorkoutFromCollection](./public/images/WorkoutFromCollection.PNG)
 
-### 
+### Friends
+
+The friends collection stores the information for each friend which includes data such as the friend's name, ID, how many workouts they've completed and when the friend was last updated. An example of this can be seen below:
+
+![FriendFromCollection](./public/images/FriendCollection.PNG)
+
+### Categories, Reps and Times
+
+There are three secondary collections which are categories, reps and times which are mainly used to represent workouts or friends. The categories collection can be useful as if the program were to be developed further the user can be given the option to view workouts by category where this collection would then be useful. For example if the user wanted to perform cardio workouts only they can get a list of workouts that are from the cardio category to choose from. This also applies to reps and times.
+
+## Security and Scalability
+
+### Security
+
+Security is a very integral part of any sort of website as companies must make sure the users data is completely safe in case of any sort of security breach or hackers. The only real sensitive information that is included in this system is the users password and in order to improve security the database only stores the password as a hashed value. The hashing is done with BCrypt which means the salting of the password is included as well. Salting protects the password against Rainbow Table attacks and makes sure even identical passwords give a unique output. As well as this BCrypt is a very slow algorithm which increases security as the time taken to guess the password using brute force also increases. 
+
+One possible way that security could be improved in the system is by using third-party security systems such as Google using OAuth. This could be used in the login / register sections and the benfit of this is the system will no longer need to store the users password.
+
+### Deployment & Scalability
+
+The way that my applictaion deploys means that it is automatically build and released whenever it is merged with the master branch. This means that the code can be tested in quick iterations.
+
+STILL TO DO...
+
+# Conclusion
+
+Looking back, the prototype includes most of the features that I set out to make however I feel like it is a long way from being a finished and polished product. It fulfills the original goals that I set out to make which were the ability to add and view workouts to track my progress in the gym.
+
+One way I could improve the applictaion in future development is thinking about making the application mobile friendly as well. This will be easy enough as the backend code is the same however there are little adjustments that need to be made to the views. The changes would be made to improve design consistency across all devices.
+
+STILL TO DO ...
+
+
 
