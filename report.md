@@ -92,7 +92,7 @@ One possible way that security could be improved in the system is by using third
 
 The way that my applictaion deploys means that it is automatically build and released whenever it is merged with the master branch. This means that the code can be tested in quick iterations.
 
-Scaling in MongoDB can be done in many different ways compared to normal databases that are normally limited due to the cost of implementation. In the application I have used horizontal scaling which brings in additional nodes to share the load of the data. This is difficult to do with relational databases as it is hard to split related data across multiple nodes however, as I am using a non-relational database this is simpler as the collections are self-contained and not coupled. This means that the nodes don't have to be 'joined' together.
+Scaling in MongoDB can be done in many different ways compared to normal databases that are normally limited due to the cost of implementation. In the application I have used horizontal scaling which brings in additional nodes to share the load of the data. This is difficult to do with relational databases as it is hard to split related data across multiple nodes however, as I am using a non-relational database this is simpler as the collections are self-contained and not coupled. This means that the nodes don't have to be 'joined' together. [1]
 
 
 # Conclusion
@@ -101,7 +101,9 @@ Looking back, the prototype includes most of the features that I set out to make
 
 One way I could improve the applictaion in future development is thinking about making the application mobile friendly as well. This will be easy enough as the backend code is the same however there are little adjustments that need to be made to the views. The changes would be made to improve design consistency across all devices.
 
-STILL TO DO ...
 
+# References
 
-
+1. - MongoDB. "How to Scale MongoDB." MongoDB,
+https://www.mongodb.com/basics/scaling
+ 
