@@ -92,7 +92,8 @@ One possible way that security could be improved in the system is by using third
 
 The way that my applictaion deploys means that it is automatically build and released whenever it is merged with the master branch. This means that the code can be tested in quick iterations.
 
-STILL TO DO...
+Scaling in MongoDB can be done in many different ways compared to normal databases that are normally limited due to the cost of implementation. In the application I have used horizontal scaling which brings in additional nodes to share the load of the data. This is difficult to do with relational databases as it is hard to split related data across multiple nodes however, as I am using a non-relational database this is simpler as the collections are self-contained and not coupled. This means that the nodes don't have to be 'joined' together.
+
 
 # Conclusion
 
