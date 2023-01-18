@@ -15,6 +15,8 @@ The module revolved around the use of MongoDB so it seemed clear that that was g
 
 In terms of the architecture of the system, the reason for choosing to use MVC is the fact that it is very easy to maintain the system no matter the size and this has been proven as a lot of very big websites such as GoDaddy.com or Ancestry.com use this technology.
 
+To make the system serverless and widely usable I have used Cyclic. The benefits of using Cyclic to deploy the application is Cyclic apps never sleeps so all front-ends and back-ends are ready on-demand at all times. Cyclic apps can be run worldwide without any overload as on Cyclic, serverless functions are allocated to each individual request on demaind, making it possible for apps to hyper scale. [2]
+
 # Home
 The home page is the most important page for a website as it is the first view the user gets of your site. My home page includes a main header that states the functionality of the website and for added looks I have also decided to display the friends in boxes allowing the user to view each friend by clicking on them. I have also included both a header and footer. The header is the navigation bar for the website and includes links to all pages as well as displaying the login information of the user and gives them the ability to register, login and then logout once logged in.
 
@@ -94,6 +96,8 @@ The way that my applictaion deploys means that it is automatically build and rel
 
 Scaling in MongoDB can be done in many different ways compared to normal databases that are normally limited due to the cost of implementation. In the application I have used horizontal scaling which brings in additional nodes to share the load of the data. This is difficult to do with relational databases as it is hard to split related data across multiple nodes however, as I am using a non-relational database this is simpler as the collections are self-contained and not coupled. This means that the nodes don't have to be 'joined' together. [1]
 
+One way that I have increased scalability is by using a serverless design by having the application hosted by Cyclic. 
+
 
 # Conclusion
 
@@ -106,4 +110,5 @@ One way I could improve the applictaion in future development is thinking about 
 
 1. - MongoDB. "How to Scale MongoDB." MongoDB,
 https://www.mongodb.com/basics/scaling
- 
+
+2. - Cyclic. "What's different about cyclic?" Cyclic, https://docs.cyclic.sh/ 
