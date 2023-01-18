@@ -26,7 +26,7 @@ app.set("view engine", "ejs");
  * notice above we are using dotenv. We can now pull the values from our environment
  */
 
-const { PORT, MONGODB_URI } = process.env;
+const { WEB_PORT, MONGODB_URI } = process.env;
 
 /**
  * connect to database
@@ -128,7 +128,7 @@ app.post("/login", userController.login);
 
 app.listen(PORT, () => {
   console.log(
-    `Example app listening at http://localhost:${PORT}`,
+    `Example app listening at http://localhost:${WEB_PORT}`,
     chalk.green("✓")
   );
 });
