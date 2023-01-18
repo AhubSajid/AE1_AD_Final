@@ -43,6 +43,10 @@ If a new user wants to register they must enter their email and a password into 
 
 ![UserLoggedIn](./public/images/UserLoggedIn.PNG)
 
+Below is a system diagram to see how each layer of the MVC app works together:
+
+![MVCDiagram](./public/images/AD_MVC.drawio.png)
+
 
 # Key Design Decisions
 
