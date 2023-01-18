@@ -1,6 +1,6 @@
 # Workout Tracker Application
-Hosted Application:
-Repository:
+Hosted Application: https://hilarious-wasp-kilt.cyclic.app/
+Repository:https://github.com/AhubSajid/AE1_AD_Final
 
 # Introduction
 My whole life I have struggled with my weight and have always felt hopeless when it came to getting in-shape. Like many others I've had my moments where I started excercising more and eating less in an attempt to change this however often I felt like my routine was all over the place and questioned whether I was actually achieving anything. In 2022, I started going to the gym and st first my aim was to do unplanned workouts, mostly involving cardio, until I lost some pounds and then switch to a more focused approach. I am now at that point where I can focus on building muscle and getting in better shape so this was the main inspiration for my project.
@@ -14,6 +14,8 @@ My project is built using Model-View-Controller(MVC) architecture which uses Nod
 The module revolved around the use of MongoDB so it seemed clear that that was going to be the technology that I was going to use to interact with the databases. Of course, MongoDB uses non-realtional databases which can have their pros and cons. The advantages of using non-relational databases is the scalabilty due to the lack of structure in the data and the simplicity of the code required for it. On the other hand, there is a big disadvantage as non-realtional databases can lead to a compromise in data integrity and consistency, however in the scenario of my project this is not a problem.
 
 In terms of the architecture of the system, the reason for choosing to use MVC is the fact that it is very easy to maintain the system no matter the size and this has been proven as a lot of very big websites such as GoDaddy.com or Ancestry.com use this technology.
+
+To make the system serverless and widely usable I have used Cyclic. The benefits of using Cyclic to deploy the application is Cyclic apps never sleeps so all front-ends and back-ends are ready on-demand at all times. Cyclic apps can be run worldwide without any overload as on Cyclic, serverless functions are allocated to each individual request on demaind, making it possible for apps to hyper scale. [2]
 
 # Home
 The home page is the most important page for a website as it is the first view the user gets of your site. My home page includes a main header that states the functionality of the website and for added looks I have also decided to display the friends in boxes allowing the user to view each friend by clicking on them. I have also included both a header and footer. The header is the navigation bar for the website and includes links to all pages as well as displaying the login information of the user and gives them the ability to register, login and then logout once logged in.
@@ -40,6 +42,10 @@ For a user to perform certain tasks such as viewing saved workouts or creating a
 If a new user wants to register they must enter their email and a password into a form which then sends this information to the database. Once they have done this they will be able to login and then perform all tasks as the header displaying the navigation will change to display all tasks and also display the users email as well as a logout button. For added security, the program doesn't save the users password directly but it uses BCrypt in order to hash the password. The user is then signed in and this allows the application to identify the current user from within every controller as the user seesion is set.
 
 ![UserLoggedIn](./public/images/UserLoggedIn.PNG)
+
+Below is a system diagram to see how each layer of the MVC app works together:
+
+![MVCDiagram](./public/images/AD_MVC.drawio.png)
 
 
 # Key Design Decisions
@@ -94,6 +100,8 @@ The way that my applictaion deploys means that it is automatically build and rel
 
 Scaling in MongoDB can be done in many different ways compared to normal databases that are normally limited due to the cost of implementation. In the application I have used horizontal scaling which brings in additional nodes to share the load of the data. This is difficult to do with relational databases as it is hard to split related data across multiple nodes however, as I am using a non-relational database this is simpler as the collections are self-contained and not coupled. This means that the nodes don't have to be 'joined' together. [1]
 
+One way that I have increased scalability is by using a serverless design by having the application hosted by Cyclic. 
+
 
 # Conclusion
 
@@ -106,4 +114,5 @@ One way I could improve the applictaion in future development is thinking about 
 
 1. - MongoDB. "How to Scale MongoDB." MongoDB,
 https://www.mongodb.com/basics/scaling
- 
+
+2. - Cyclic. "What's different about cyclic?" Cyclic, https://docs.cyclic.sh/ 

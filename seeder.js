@@ -12,7 +12,7 @@ const { MONGODB_URI, MONGODB__PRODUCTION_URI } = process.env;
 /**
  * constants
  */
-const client = new MongoClient(process.env.NODE_ENV === "production" ? MONGODB__PRODUCTION_URI : MONGODB_URI);
+const client = new MongoClient(process.env.NODE_ENV === "production" ? MONGODB__PRODUCTION_URI : MONGODB_URI,);
 
 async function main() {
   try {
@@ -40,11 +40,7 @@ async function main() {
     const data = await fs.readFile(path.join(__dirname, "gym.json"), "utf8");
     await db.collection("workouts").insertMany(JSON.parse(data));
 
-    /**
-     * This perhaps appears a little more complex than it is. Below, we are
-     * grouping the wine tasters and summing their total tastings. Finally,
-     * we tidy up the output so it represents the format we need for our new collection
-     */
+
 
     const gymFriendsRef = await db.collection("workouts").aggregate([
       { $match: { friend_name: { $ne: null } } },
