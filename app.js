@@ -52,7 +52,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(expressSession({ secret: 'foo barr', cookie: { expires: new Date(253402300000000) } }))
+app.use(expressSession({ secret: 'hey there', cookie: { expires: new Date(253402300000000) , resave: true, saveUninitailized: true } }))
 
 
 app.use("*", async (req, res, next) => {
@@ -126,7 +126,7 @@ app.get("/login", (req, res) => {
 app.post("/login", userController.login);
 
 
-app.listen(PORT, () => {
+app.listen(WEB_PORT, () => {
   console.log(
     `Example app listening at http://localhost:${WEB_PORT}`,
     chalk.green("✓")
