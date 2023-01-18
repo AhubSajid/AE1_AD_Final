@@ -1,6 +1,6 @@
 # Workout Tracker Application
-Hosted Application:
-Repository:
+Hosted Application: https://hilarious-wasp-kilt.cyclic.app/
+Repository:https://github.com/AhubSajid/AE1_AD_Final
 
 # Introduction
 My whole life I have struggled with my weight and have always felt hopeless when it came to getting in-shape. Like many others I've had my moments where I started excercising more and eating less in an attempt to change this however often I felt like my routine was all over the place and questioned whether I was actually achieving anything. In 2022, I started going to the gym and st first my aim was to do unplanned workouts, mostly involving cardio, until I lost some pounds and then switch to a more focused approach. I am now at that point where I can focus on building muscle and getting in better shape so this was the main inspiration for my project.
